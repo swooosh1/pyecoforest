@@ -109,7 +109,7 @@ class Device:
     alarm_code: str | None = None
 
     # sensors
-    environment_temperature: float | None = None
+    environment_temperature=float(status["temperatura"]) if status["temperatura"] != "--.-" else 0.0,
     cpu_temperature: float | None = None
     gas_temperature: float | None = None
     ntc_temperature: float | None = None
