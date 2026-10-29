@@ -143,7 +143,7 @@ class Device:
             temperature=float(status["consigna_temperatura"]),
             alarm=Alarm.build(alarms["get_alarmas"]),
             alarm_code=alarms["get_alarmas"] if alarms["get_alarmas"] != "N" else None,
-            environment_temperature=float(status["temperatura"]) if status["temperatura"] != "--.-" else 0.0,,
+            environment_temperature=float(status["temperatura"]) if status["temperatura"] != "--.-" else 0.0,
             cpu_temperature=float(stats["Tp"]),
             gas_temperature=float(stats["Th"]),
             ntc_temperature=float(stats["Tn"]),
